@@ -143,3 +143,5 @@ RUN apt-get update \
 && echo "   force user = user" >> /etc/samba/smb.conf
 
 USER user
+WORKDIR /home/user
+COPY --chown=user:user ./entrypoint.sh ./
